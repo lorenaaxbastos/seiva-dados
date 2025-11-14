@@ -1,0 +1,17 @@
+{
+  "name": "seiva-dados",
+  "version": "1.0.0",
+  "description": "Site Seiva Dados",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass main.scss styles.css -w"
+  },
+  "keywords": [
+    "sinc"
+  ],
+  "author": "Lorena Bastos",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.93.2"
+  }
+}
