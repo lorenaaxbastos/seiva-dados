@@ -100,7 +100,7 @@ section > * {
   z-index: 5;
   max-width: 130rem;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   section > * {
     max-width: 80%;
   }
@@ -306,7 +306,7 @@ section > * {
   left: unset;
   right: -2rem;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   .barco--right,
   .algas--right,
   .olhos--right {
@@ -319,7 +319,7 @@ section > * {
   left: -2rem;
   right: unset;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   .barco--left,
   .algas--left,
   .olhos--left {
@@ -336,7 +336,7 @@ section > * {
 .barco--left {
   transform: rotate(25deg);
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   .barco {
     width: 35rem;
   }
@@ -351,7 +351,7 @@ section > * {
 .algas--left {
   transform: rotate(-10deg) scaleX(-1);
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   .algas {
     width: 45rem;
   }
@@ -367,7 +367,7 @@ section > * {
 .olhos--left {
   transform: rotate(-15deg) scaleX(-1);
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   .olhos {
     width: 20rem;
   }
@@ -479,7 +479,7 @@ section > * {
 #sobre .hero__content {
   max-width: 60rem;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #sobre .hero__content {
     max-width: 50rem;
   }
@@ -490,7 +490,7 @@ section > * {
   background: url("/assets/imgs/logo-verde.png") no-repeat center/cover;
   -webkit-text-fill-color: transparent;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #sobre .hero__heading {
     margin-bottom: 1rem;
   }
@@ -510,7 +510,7 @@ section > * {
   letter-spacing: 2px;
   background-color: #00ff00;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #sobre .hero__subheading {
     font-size: 2rem;
   }
@@ -591,7 +591,7 @@ section > * {
   color: #000000;
 }
 
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #impacto .hero {
     height: auto;
   }
@@ -599,7 +599,7 @@ section > * {
 #impacto .hero__content {
   text-align: center;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #impacto .hero__content {
     padding-top: 8rem !important;
   }
@@ -656,7 +656,7 @@ section > * {
   line-height: 1.2;
   margin: 0;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #impacto .box__text {
     font-size: 1.4rem;
   }
@@ -685,7 +685,7 @@ section > * {
 #impacto .box:nth-child(4) .box__icon, #impacto .box:nth-child(6) .box__icon {
   background: url("/assets/imgs/olho-verde.png") no-repeat center/contain;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #impacto .box {
     max-width: 20rem;
   }
@@ -802,7 +802,7 @@ section > * {
 #trilha .professores__content {
   padding-bottom: 15rem;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #trilha .professores__content {
     padding-bottom: 3rem;
   }
@@ -828,7 +828,7 @@ section > * {
   width: 100%;
   text-align: center;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #escolas .hero__content {
     padding-top: 8rem !important;
   }
@@ -845,7 +845,7 @@ section > * {
   margin: 0 auto 4rem;
   color: #ffffff;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #escolas .hero__text {
     max-width: 100%;
   }
@@ -879,7 +879,7 @@ section > * {
   width: 100%;
   text-align: center;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #experiencias .hero__content {
     padding-top: 8rem !important;
   }
@@ -966,7 +966,7 @@ section > * {
 #quem h2 {
   margin-bottom: 0;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #quem h2 {
     font-size: 3rem;
   }
@@ -1001,7 +1001,7 @@ section > * {
 #quem .hero__content {
   max-width: 60rem;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #quem .hero__content {
     max-width: 50rem;
   }
@@ -1012,7 +1012,7 @@ section > * {
   background: url("/assets/imgs/logo-verde.png") no-repeat center/cover;
   -webkit-text-fill-color: transparent;
 }
-@media (max-width: 90em) {
+@media (max-width: 100em) {
   #quem .hero__heading {
     margin-bottom: 1rem;
   }

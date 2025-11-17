@@ -140,7 +140,7 @@ section {
     max-width: 130rem;
   }
 
-  @media (max-width: 90em) {
+  @media (max-width: 100em) {
     & > * {
       max-width: 80%;
     }
@@ -410,7 +410,7 @@ section {
     left: unset;
     right: -2rem;
 
-    @media (max-width: 90em) {
+    @media (max-width: 100em) {
       right: -4rem;
     }
   }
@@ -419,7 +419,7 @@ section {
     left: -2rem;
     right: unset;
 
-    @media (max-width: 90em) {
+    @media (max-width: 100em) {
       left: -4rem;
     }
   }
@@ -436,7 +436,7 @@ section {
     transform: rotate(25deg);
   }
 
-  @media (max-width: 90em) {
+  @media (max-width: 100em) {
     width: 35rem;
   }
 }
@@ -452,7 +452,7 @@ section {
     transform: rotate(-10deg) scaleX(-1);
   }
 
-  @media (max-width: 90em) {
+  @media (max-width: 100em) {
     width: 45rem;
   }
 }
@@ -469,7 +469,7 @@ section {
     transform: rotate(-15deg) scaleX(-1);
   }
 
-  @media (max-width: 90em) {
+  @media (max-width: 100em) {
     width: 20rem;
   }
 }
@@ -596,7 +596,7 @@ section {
     &__content {
       max-width: 60rem;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         max-width: 50rem;
       }
     }
@@ -607,7 +607,7 @@ section {
       background: url("/assets/imgs/logo-verde.png") no-repeat center/cover;
       -webkit-text-fill-color: transparent;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         margin-bottom: 1rem;
       }
     }
@@ -627,7 +627,7 @@ section {
       letter-spacing: 2px;
       background-color: $color-green-accent;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         font-size: 2rem;
       }
     }
@@ -725,7 +725,7 @@ section {
 
 #impacto {
   .hero {
-    @media (max-width: 90em) {
+    @media (max-width: 100em) {
       height: auto;
     }
   }
@@ -733,7 +733,7 @@ section {
   .hero__content {
     text-align: center;
 
-    @media (max-width: 90em) {
+    @media (max-width: 100em) {
       padding-top: 8rem !important;
     }
   }
@@ -795,7 +795,7 @@ section {
       line-height: 1.2;
       margin: 0;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         font-size: 1.4rem;
       }
     }
@@ -836,7 +836,7 @@ section {
       }
     }
 
-    @media (max-width: 90em) {
+    @media (max-width: 100em) {
       max-width: 20rem;
     }
   }
@@ -967,7 +967,7 @@ section {
     &__content {
       padding-bottom: 15rem;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         padding-bottom: 3rem;
       }
     }
@@ -995,7 +995,7 @@ section {
       width: 100%;
       text-align: center;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         padding-top: 8rem !important;
       }
     }
@@ -1011,7 +1011,7 @@ section {
       margin: 0 auto 4rem;
       color: $color-white;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         max-width: 100%;
       }
     }
@@ -1052,7 +1052,7 @@ section {
       width: 100%;
       text-align: center;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         padding-top: 8rem !important;
       }
     }
@@ -1154,7 +1154,7 @@ section {
   h2 {
     margin-bottom: 0;
 
-    @media (max-width: 90em) {
+    @media (max-width: 100em) {
       font-size: 3rem;
     }
   }
@@ -1197,7 +1197,7 @@ section {
     &__content {
       max-width: 60rem;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         max-width: 50rem;
       }
     }
@@ -1208,7 +1208,7 @@ section {
       background: url("/assets/imgs/logo-verde.png") no-repeat center/cover;
       -webkit-text-fill-color: transparent;
 
-      @media (max-width: 90em) {
+      @media (max-width: 100em) {
         margin-bottom: 1rem;
       }
     }
