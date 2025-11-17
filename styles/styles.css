@@ -419,7 +419,7 @@ section > * {
   width: 10rem;
   transform: rotate(-12deg);
 }
-@media (max-width: 90em) {
+@media (max-width: 95em) {
   .navbar__logo .logo {
     width: 8rem;
   }
@@ -429,7 +429,7 @@ section > * {
   display: flex;
   gap: 1rem;
 }
-@media (max-width: 90em) {
+@media (max-width: 95em) {
   .navbar__navlist {
     gap: 0.5rem;
   }
@@ -451,7 +451,7 @@ section > * {
   border: 3px solid #1e7bd6;
   border-bottom-color: #000e88;
 }
-@media (max-width: 90em) {
+@media (max-width: 95em) {
   .navbar__navlink:visited, .navbar__navlink:link {
     font-size: 1.3rem;
     padding: 0.5rem;
