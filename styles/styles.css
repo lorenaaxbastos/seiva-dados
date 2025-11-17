@@ -1013,7 +1013,7 @@ section > * {
 }
 @media (max-width: 100em) {
   #quem .hero__content {
-    max-width: 70rem;
+    max-width: 50rem;
   }
 }
 #quem .hero__heading {
@@ -1034,6 +1034,11 @@ section > * {
 #quem .hero__text .bold {
   font-weight: 800;
   color: #00ff00;
+}
+@media (max-width: 100em) {
+  #quem .hero__text {
+    font-size: 1.4rem;
+  }
 }
 #quem .unicef__content .general__logo--wrapper::after {
   background: url("/assets/imgs/img-clip-3.png") no-repeat center/contain;
