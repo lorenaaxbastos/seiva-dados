@@ -524,7 +524,7 @@ section {
       width: 10rem;
       transform: rotate(-12deg);
 
-      @media (max-width: 95em) {
+      @media (max-width: 100em) {
         width: 8rem;
       }
     }
@@ -535,7 +535,7 @@ section {
     display: flex;
     gap: 1rem;
 
-    @media (max-width: 95em) {
+    @media (max-width: 100em) {
       gap: 0.5rem;
     }
   }
@@ -562,7 +562,7 @@ section {
       border-bottom-color: $color-blue-dark;
     }
 
-    @media (max-width: 95em) {
+    @media (max-width: 100em) {
       font-size: 1.3rem;
       padding: 0.5rem;
     }
