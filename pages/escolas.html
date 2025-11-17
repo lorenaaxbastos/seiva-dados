@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="shortcut icon" href="/assets/imgs/olho-vermelho.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <title>Mapa de Experiências Seiva.Dados – Escolas participantes</title>
+  </head>
+  <body id="escolas">
+    <header id="header" class="header"></header>
+
+    <main>
+      <section class="hero bg-blue comp comp--2">
+        <div class="hero__content">
+          <h1 class="hero__heading">Escolas participantes</h1>
+          <p class="hero__text">
+            As escolas participantes da Seiva.Dados 2025, localizadas nas zonas Norte,
+            Leste e Centro-Sul de Manaus, enfrentam vulnerabilidades distintas, desde
+            enchentes recorrentes até precarização da infraestrutura educacional. Essas
+            condições, através da implementação de metodologias de Aprendizagem Baseada em
+            Problemas e Projetos (ABP), se tornaram desafios e objetos de estudo dentro do
+            próprio processo formativo: as estudantes estão convertendo problemas locais
+            por meio de perguntas mobilizadoras, realizando diagnósticos situacionais das
+            realidades locais e criando protótipos de intervenção para suas comunidades.
+          </p>
+          <div id="map" class="map"></div>
+        </div>
+        <img
+          src="/assets/imgs/plantas-linhas.png"
+          alt="Algas marinhas"
+          class="algas algas--left"
+        />
+        <img
+          src="/assets/imgs/olhos-plantas.png"
+          alt="Olhos com algas marinhas"
+          class="olhos olhos--right"
+        />
+        <img
+          src="/assets/imgs/barco-roxo.png"
+          alt="Barco roxo"
+          class="barco barco--left"
+        />
+      </section>
+
+      <footer id="footer"></footer>
+    </main>
+  </body>
+  <script src="/scripts/script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/scripts/map.js"></script>
+</html>

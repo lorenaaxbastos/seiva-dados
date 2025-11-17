@@ -1,4 +1,7 @@
+const sobre = document.getElementById("sobre");
+const quem = document.getElementById("quem");
 const header = document.getElementById("header");
+const footer = document.getElementById("footer");
 const heroLogo = document.querySelector(".hero__heading");
 const heroContent = document.querySelector(".hero__content");
 
@@ -19,7 +22,16 @@ fetch("/components/header.html")
     adjustContentPos();
   })
   .catch((error) => {
-    console.error("Erro ao carregar a navbar:", error);
+    console.error("Erro ao carregar o header:", error);
+  });
+
+fetch("/components/footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    footer.innerHTML = data;
+  })
+  .catch((error) => {
+    console.error("Erro ao carregar o footer:", error);
   });
 
 // AJUSTAR TAMANHO DA LOGO NA HERO SECTION
@@ -29,6 +41,8 @@ function adjustLogoSize() {
   heroLogo.style.height = contentWidth / 2 + "px";
 }
 
-adjustLogoSize();
+if (sobre || quem) {
+  adjustLogoSize();
 
-window.addEventListener("resize", adjustLogoSize);
+  window.addEventListener("resize", adjustLogoSize);
+}

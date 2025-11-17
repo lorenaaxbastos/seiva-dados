@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="shortcut icon" href="/assets/imgs/olho-vermelho.png" type="image/png" />
+
+    <title>Mapa de Experiências Seiva.Dados – Impacto do projeto</title>
+  </head>
+  <body id="impacto">
+    <header id="header" class="header"></header>
+
+    <main>
+      <section class="hero bg-yellow comp comp--2 comp--reverse">
+        <div class="hero__content">
+          <h1 class="heading">Impacto do projeto</h1>
+          <boxes class="boxes">
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">5</p>
+                  <img
+                    src="/assets/imgs/icone-escola.png"
+                    alt="Ícone de escola"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">escolas participantes</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">76</p>
+                  <img
+                    src="/assets/imgs/icone-menina.png"
+                    alt="Ícone de menina"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">meninas participantes da trilha formativa</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">16</p>
+                  <img
+                    src="/assets/imgs/icone-professor.png"
+                    alt="Ícone de professor"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">profissionais da educação participantes do curso</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">1087</p>
+                  <img
+                    src="/assets/imgs/icone-estudante.png"
+                    alt="Ícone de estudante"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">estudantes alcançadas indiretamente</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">15</p>
+                  <img
+                    src="/assets/imgs/icone-projeto-pesquisa.png"
+                    alt="Ícone de projeto  de pesquisa"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">projetos de pesquisa realizadas pelas estudantes</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">XX</p>
+                  <img
+                    src="/assets/imgs/icone-projeto-pratica.png"
+                    alt="Ícone de transformação de um projeto em prática"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">práticas desenvolvidas pelos professores(as)</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">5</p>
+                  <img
+                    src="/assets/imgs/icone-camera.png"
+                    alt="Ícone de câmera"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">
+                  kits de produção midiática doados aos Laboratórios Cidadãos
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box__content">
+                <span class="box__icon">&nbsp;</span>
+                <div class="box__number">
+                  <p class="box__number--text">115</p>
+                  <img
+                    src="/assets/imgs/icone-relogio.png"
+                    alt="Ícone de relógio"
+                    class="box__number--icon"
+                  />
+                </div>
+                <p class="box__text">horas formativas</p>
+              </div>
+            </div>
+          </boxes>
+        </div>
+      </section>
+
+      <section class="nuvem bg-blue blobs blobs--bottom">
+        <div class="nuvem__content">
+          <h2 class="nuvem__heading">Destaques dos relatos</h2>
+          <p class="nuvem__text">
+            Os principais assuntos das práticas realizadas durante a iniciativa.
+          </p>
+
+          <div id="wordcloud" class="wordcloud"></div>
+        </div>
+        <img
+          src="/assets/imgs/plantas-linhas.png"
+          alt="Algas marinhas"
+          class="algas algas--left"
+        />
+      </section>
+
+      <footer id="footer"></footer>
+    </main>
+  </body>
+  <script src="/scripts/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.1.2/wordcloud2.min.js"></script>
+  <script src="/scripts/word-cloud.js"></script>
+</html>
