@@ -710,10 +710,20 @@ section > * {
   height: 40rem;
 }
 
+#trilha .hero {
+  height: auto;
+}
 #trilha .hero__content {
+  width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 100em) {
+  #trilha .hero__content {
+    padding-top: 8rem !important;
+  }
 }
 #trilha .hero .heading {
   display: inline-block;
@@ -1003,7 +1013,7 @@ section > * {
 }
 @media (max-width: 100em) {
   #quem .hero__content {
-    max-width: 50rem;
+    max-width: 70rem;
   }
 }
 #quem .hero__heading {

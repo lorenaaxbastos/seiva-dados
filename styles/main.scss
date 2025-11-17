@@ -866,10 +866,18 @@ section {
 
 #trilha {
   .hero {
+    height: auto;
+
     &__content {
+      width: 100%;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media (max-width: 100em) {
+        padding-top: 8rem !important;
+      }
     }
 
     .heading {
@@ -1198,7 +1206,7 @@ section {
       max-width: 60rem;
 
       @media (max-width: 100em) {
-        max-width: 50rem;
+        max-width: 70rem;
       }
     }
 
