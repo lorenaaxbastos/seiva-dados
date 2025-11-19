@@ -25,6 +25,7 @@ const options = {
   rotationSteps: 2,
   backgroundColor: "rgba(0,0,0,0)",
   color: function (word, weight) {
+    if (weight >= 7) return "#d1008d";
     if (weight >= 6) return "#fff";
     if (weight >= 4) return "#f4c803";
     return "#000e88";
