@@ -20,6 +20,7 @@ $color-green: #62dc76;
 $color-aqua: #39b2b5;
 $color-blue: #1e7bd6;
 $color-aqua-dark: #00363a;
+$color-green-dark: #003a08;
 $color-blue-dark: #000e88;
 $color-pink-dark: #88004f;
 $color-red-dark: #880000;
@@ -156,10 +157,20 @@ p:not(:last-child) {
   z-index: 100000;
 }
 
-.photo {
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery img {
   cursor: pointer;
-  display: block;
+  max-width: 60rem;
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 // BASE STYLES
@@ -580,6 +591,17 @@ section {
   }
 
   &__navitem {
+    position: relative;
+
+    &.navbar__experiencias {
+      &:hover {
+        .menu-experiencias {
+          visibility: visible;
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
   }
 
   &__navlink:visited,
@@ -604,6 +626,49 @@ section {
     @media (max-width: 100em) {
       font-size: 1.3rem;
       padding: 0.5rem;
+    }
+  }
+}
+
+.menu-experiencias {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transform: translateY(calc(100% + 3.4rem));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.2s ease;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    background-color: $color-blue-dark;
+  }
+
+  &__list-item {
+    list-style: none;
+  }
+
+  &__list-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:visited,
+    &:link {
+      color: $color-white;
+    }
+
+    &:hover {
+      background-color: $color-blue;
     }
   }
 }
@@ -1324,6 +1389,270 @@ section {
   }
 }
 
+#experiencias-escola {
+  .hero {
+    height: auto;
+
+    &__content {
+      width: 100%;
+      text-align: center;
+
+      @media (max-width: 100em) {
+        padding-top: 8rem !important;
+      }
+    }
+
+    &__heading {
+      @include tag($color-white, $color-blue-dark);
+
+      border-bottom: 4px solid $color-green-accent;
+    }
+
+    &__text {
+      color: $color-white;
+    }
+  }
+
+  .boxes {
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .box {
+    max-width: 60rem;
+    flex: 1;
+    display: flex;
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+
+      &:visited,
+      &:link {
+        text-decoration: none;
+        color: $color-black;
+
+        .cidilha {
+          &::after {
+            background-color: $color-black;
+            width: 0.4rem;
+          }
+        }
+      }
+
+      &:hover {
+        .box__content {
+          background-color: $color-yellow-accent !important;
+        }
+      }
+    }
+
+    &__content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: background-color 0.2s ease;
+    }
+
+    &__img {
+      width: 100%;
+      height: 20rem;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &__name {
+      font-family: "Navigator Extended", sans-serif;
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin: 2rem 0;
+    }
+
+    &__text {
+      p {
+        line-height: 1.2;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &:nth-of-type(1) {
+      .box {
+        &__content {
+          background-color: $color-green;
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      .box {
+        &__content {
+          background-color: $color-blue-accent-light;
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      .box {
+        &__content {
+          background-color: $color-purple-accent-light;
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      .box {
+        &__content {
+          background-color: $color-aqua;
+        }
+      }
+    }
+  }
+
+  &.nathalia {
+    .box {
+      &:nth-of-type(1) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/nathalia-uchoa/o-desafio-1.png");
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/nathalia-uchoa/seguranca-1.jpeg");
+            background-size: 120%;
+            background-position: 100% 20%;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/nathalia-uchoa/starsgirls-1.png");
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/nathalia-uchoa/winters-1.jpg");
+            background-size: 110%;
+            background-position: 100% 20%;
+          }
+        }
+      }
+    }
+  }
+
+  &.roberto {
+    .box {
+      &:nth-of-type(1) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/roberto-dos-santos-vieira/falta-2.jpg");
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/roberto-dos-santos-vieira/quimera-1.png");
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/roberto-dos-santos-vieira/twice-3.jpg");
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/roberto-dos-santos-vieira/uni4-1.jpg");
+          }
+        }
+      }
+    }
+  }
+
+  &.jairo {
+    .box {
+      &:nth-of-type(1) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/jairo-da-silva-rocha/5-elementos-2.jpg");
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/jairo-da-silva-rocha/QUESTION-TAGS-1.jpeg");
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/jairo-da-silva-rocha/vozes-3.png");
+          }
+        }
+      }
+    }
+  }
+
+  &.manuel {
+    .box {
+      &:nth-of-type(1) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/manuel-rodrigues-de-souza/as-supermendes-1.jpg");
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/manuel-rodrigues-de-souza/infraestrutura-3.jpg");
+          }
+        }
+      }
+    }
+  }
+
+  &.ruy {
+    .box {
+      &:nth-of-type(1) {
+        .box {
+          &__img {
+            background-image: url("/assets/praticas/ruy-alencar/parada-2.png");
+          }
+        }
+      }
+    }
+  }
+}
+
 #quem {
   section:not(.hero, .conclusao) {
     height: 70vh;
@@ -1570,10 +1899,30 @@ section {
     }
   }
 
+  .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .nome-escola {
+    display: inline-block;
     font-family: "Navigator Extended", sans-serif;
     font-size: 2rem;
-    color: $color-orange-accent;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    padding: 0.5rem 2rem;
+    transition: all 0.2s ease;
+
+    &:visited,
+    &:link {
+      color: $color-orange-accent;
+    }
+
+    &:hover {
+      color: $color-blue-dark;
+      background-color: orange;
+    }
   }
 
   .tag {
@@ -1584,6 +1933,7 @@ section {
 
   .nome {
     @include tag($color-purple-accent-dark, $color-green-accent);
+    margin-bottom: 1rem;
 
     .cidilha {
       &::after {
@@ -1593,34 +1943,63 @@ section {
     }
   }
 
+  .subnome {
+    color: $color-purple-accent-dark;
+
+    .cidilha {
+      &::after {
+        background-color: $color-purple-accent-dark;
+        height: 0.8rem;
+      }
+    }
+  }
+
   .informacoes-gerais {
+    margin: 0 auto;
     display: flex;
     gap: 5rem;
     justify-content: center;
     margin-bottom: 8dvb;
+
+    .integrantes {
+      max-width: 50rem;
+    }
   }
 
   .conteudo-principal {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
 
-    & > div {
-      position: relative;
+    & > div:not(.galeria) {
       width: 100%;
-      padding: 5rem 3rem 3rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .tag + div {
+        padding: 3rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     .tag {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: max-content;
+      display: block;
+      width: 100%;
       padding: 1rem 3rem;
       line-height: 1;
       color: $color-white;
+    }
+  }
+
+  .motivacao {
+    background-color: $color-aqua;
+
+    .tag {
+      background-color: $color-orange-dark;
     }
   }
 
@@ -1632,10 +2011,15 @@ section {
     }
   }
 
+  .relevancia {
+    background-color: $color-salmon;
+
+    .tag {
+      background-color: $color-purple-accent-dark;
+    }
+  }
+
   .aprendizados {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: $color-blue-accent-light;
 
     .tag {
@@ -1680,6 +2064,7 @@ section {
 
     .tag {
       background-color: $color-purple-accent-dark;
+      margin-bottom: 1rem;
 
       .cidilha {
         &::after {
@@ -1687,10 +2072,338 @@ section {
         }
       }
     }
+  }
 
-    img {
-      max-width: 50rem;
-      width: 100%;
+  &.cinco-elementos {
+    .conteudo-principal {
+      grid-template-columns: repeat(6, 1fr);
+
+      &.boxes--col-2 {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+      }
+    }
+
+    .boxes--col-2 {
+      grid-template-rows: repeat(2, 1fr) !important;
+      grid-column: 4/-1;
+    }
+
+    .motivacao {
+      grid-column: 1/-1;
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 1/4;
+    }
+
+    .relevancia {
+      grid-column: 4/-1;
+    }
+
+    .aprendizados {
+      grid-column: 1/4;
+    }
+  }
+
+  &.question-tags {
+    .conteudo-principal {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, auto);
+
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-row: 1/-1;
+
+      .tag + div {
+        display: block !important;
+        text-align: left;
+      }
+    }
+
+    .pdf {
+      .tag {
+        margin-bottom: 3rem;
+      }
+
+      div {
+        width: 100%;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding: 0 !important;
+      }
+
+      .iframe {
+        min-width: 50rem;
+        height: 40rem;
+        flex: 1;
+      }
+    }
+  }
+
+  &.vozes-comunidade {
+    .conteudo-principal {
+      grid-template-columns: repeat(6, 1fr);
+
+      &.boxes--col-2 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .boxes--col-2 {
+      display: grid !important;
+      grid-template-rows: repeat(2, auto) !important;
+      row-gap: 4rem;
+      grid-column: 1/4;
+    }
+
+    .relevancia {
+      grid-column: 4/-1;
+    }
+
+    .aprendizados {
+      grid-column: 1/3;
+    }
+
+    .desafios {
+      grid-column: 3/5;
+    }
+
+    .funcionamento-e-melhorias {
+      grid-column: 5/-1;
+    }
+  }
+
+  &.supermendes,
+  &.infraestrutura {
+    .conteudo-principal {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .motivacao {
+      grid-column: 1/4;
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 4/-1;
+    }
+
+    .relevancia {
+      grid-column: 1/5;
+    }
+
+    .aprendizados {
+      grid-column: 5/-1;
+    }
+
+    .desafios {
+      grid-column: 1/3;
+    }
+
+    .funcionamento-e-melhorias {
+      grid-column: 3/-1;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(3, minmax(200px, max-content));
+    }
+  }
+
+  &.desafio,
+  &.starsgirls,
+  &.twice {
+    .conteudo-principal {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &.seguranca {
+    .conteudo-principal {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 1/-1;
+    }
+  }
+
+  &.winters {
+    .conteudo-principal {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .motivacao {
+      grid-column: 1/3;
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 3/5;
+    }
+
+    .aprendizados {
+      grid-column: 5/-1;
+    }
+
+    .desafios {
+      grid-column: 1/4;
+    }
+
+    .funcionamento-e-melhorias {
+      grid-column: 4/-1;
+    }
+  }
+
+  &.falta {
+    .conteudo-principal {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .motivacao {
+      grid-column: 1/5;
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 5/-1;
+    }
+
+    .relevancia {
+      grid-column: 1/5;
+    }
+
+    .aprendizados {
+      grid-column: 5/-1;
+    }
+
+    .desafios {
+      grid-column: 1/3;
+    }
+
+    .funcionamento-e-melhorias {
+      grid-column: 3/-1;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(3, minmax(200px, max-content));
+    }
+  }
+
+  &.quimera {
+    .conteudo-principal {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .motivacao {
+      grid-column: 1/4;
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 4/-1;
+    }
+
+    .relevancia {
+      grid-column: 1/-1;
+    }
+
+    .aprendizados {
+      grid-column: 1/3;
+    }
+
+    .desafios {
+      grid-column: 3/5;
+    }
+
+    .funcionamento-e-melhorias {
+      grid-column: 5/-1;
+    }
+  }
+
+  &.uni-quatro {
+    .conteudo-principal {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 1/-1;
+    }
+
+    .motivacao {
+      grid-column: 1/4;
+    }
+
+    .relevancia {
+      grid-column: 4/-1;
+    }
+
+    .aprendizados {
+      grid-column: 1/3;
+    }
+
+    .desafios {
+      grid-column: 3/5;
+    }
+
+    .funcionamento-e-melhorias {
+      grid-column: 5/-1;
+    }
+  }
+
+  &.parada {
+    .conteudo-principal {
+      grid-template-columns: repeat(4, 1fr);
+
+      &.boxes--col-2 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .boxes--col-2 {
+      display: grid !important;
+      grid-template-rows: repeat(2, auto) !important;
+      row-gap: 4rem;
+      grid-column: 1/3;
+    }
+
+    .o-que-foi-desenvolvido {
+      grid-column: 1/-1;
+    }
+
+    .motivacao {
+      grid-column: 1/3;
+    }
+
+    .relevancia {
+      grid-column: 3/-1;
+    }
+
+    .funcionamento-e-melhorias {
+      grid-column: 3/-1;
+    }
+
+    .pdf {
+      .tag {
+        margin-bottom: 3rem;
+      }
+
+      div {
+        width: 100%;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding: 0 !important;
+      }
+
+      .iframe {
+        min-width: 50rem;
+        height: 40rem;
+        flex: 1;
+      }
     }
   }
 }

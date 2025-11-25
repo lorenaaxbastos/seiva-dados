@@ -1,4 +1,4 @@
-const photos = document.querySelectorAll(".photo img");
+const photos = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 const lightboxClose = document.getElementById("lightboxClose");

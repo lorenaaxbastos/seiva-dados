@@ -115,10 +115,20 @@ p:not(:last-child) {
   z-index: 100000;
 }
 
-.photo {
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery img {
   cursor: pointer;
-  display: block;
+  max-width: 60rem;
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 section {
@@ -469,6 +479,14 @@ section > * {
     gap: 0.5rem;
   }
 }
+.navbar__navitem {
+  position: relative;
+}
+.navbar__navitem.navbar__experiencias:hover .menu-experiencias {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
 .navbar__navlink:visited, .navbar__navlink:link {
   text-decoration: none;
   font-size: 1.6rem;
@@ -491,6 +509,43 @@ section > * {
     font-size: 1.3rem;
     padding: 0.5rem;
   }
+}
+
+.menu-experiencias {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transform: translateY(calc(100% + 3.4rem));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.menu-experiencias__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  background-color: #000e88;
+}
+.menu-experiencias__list-item {
+  list-style: none;
+}
+.menu-experiencias__list-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.menu-experiencias__list-link:visited, .menu-experiencias__list-link:link {
+  color: #ffffff;
+}
+.menu-experiencias__list-link:hover {
+  background-color: #1e7bd6;
 }
 
 #footer {
@@ -1094,6 +1149,140 @@ section > * {
   top: 0;
 }
 
+#experiencias-escola .hero {
+  height: auto;
+}
+#experiencias-escola .hero__content {
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 100em) {
+  #experiencias-escola .hero__content {
+    padding-top: 8rem !important;
+  }
+}
+#experiencias-escola .hero__heading {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #000e88;
+  padding: 0.5rem 1rem;
+  border-bottom: 4px solid #00ff00;
+}
+#experiencias-escola .hero__text {
+  color: #ffffff;
+}
+#experiencias-escola .boxes {
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+  justify-content: center;
+}
+#experiencias-escola .box {
+  max-width: 60rem;
+  flex: 1;
+  display: flex;
+}
+#experiencias-escola .box__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+#experiencias-escola .box__link:visited, #experiencias-escola .box__link:link {
+  text-decoration: none;
+  color: #000000;
+}
+#experiencias-escola .box__link:visited .cidilha::after, #experiencias-escola .box__link:link .cidilha::after {
+  background-color: #000000;
+  width: 0.4rem;
+}
+#experiencias-escola .box__link:hover .box__content {
+  background-color: #f4c803 !important;
+}
+#experiencias-escola .box__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: background-color 0.2s ease;
+}
+#experiencias-escola .box__img {
+  width: 100%;
+  height: 20rem;
+  background-size: cover;
+  background-position: center;
+}
+#experiencias-escola .box__name {
+  font-family: "Navigator Extended", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin: 2rem 0;
+}
+#experiencias-escola .box__text p {
+  line-height: 1.2;
+}
+#experiencias-escola .box__text p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#experiencias-escola .box:nth-of-type(1) .box__content {
+  background-color: #62dc76;
+}
+#experiencias-escola .box:nth-of-type(2) .box__content {
+  background-color: #69c8ff;
+}
+#experiencias-escola .box:nth-of-type(3) .box__content {
+  background-color: #dc69ff;
+}
+#experiencias-escola .box:nth-of-type(4) .box__content {
+  background-color: #39b2b5;
+}
+#experiencias-escola.nathalia .box:nth-of-type(1) .box__img {
+  background-image: url("/assets/praticas/nathalia-uchoa/o-desafio-1.png");
+}
+#experiencias-escola.nathalia .box:nth-of-type(2) .box__img {
+  background-image: url("/assets/praticas/nathalia-uchoa/seguranca-1.jpeg");
+  background-size: 120%;
+  background-position: 100% 20%;
+}
+#experiencias-escola.nathalia .box:nth-of-type(3) .box__img {
+  background-image: url("/assets/praticas/nathalia-uchoa/starsgirls-1.png");
+}
+#experiencias-escola.nathalia .box:nth-of-type(4) .box__img {
+  background-image: url("/assets/praticas/nathalia-uchoa/winters-1.jpg");
+  background-size: 110%;
+  background-position: 100% 20%;
+}
+#experiencias-escola.roberto .box:nth-of-type(1) .box__img {
+  background-image: url("/assets/praticas/roberto-dos-santos-vieira/falta-2.jpg");
+}
+#experiencias-escola.roberto .box:nth-of-type(2) .box__img {
+  background-image: url("/assets/praticas/roberto-dos-santos-vieira/quimera-1.png");
+}
+#experiencias-escola.roberto .box:nth-of-type(3) .box__img {
+  background-image: url("/assets/praticas/roberto-dos-santos-vieira/twice-3.jpg");
+}
+#experiencias-escola.roberto .box:nth-of-type(4) .box__img {
+  background-image: url("/assets/praticas/roberto-dos-santos-vieira/uni4-1.jpg");
+}
+#experiencias-escola.jairo .box:nth-of-type(1) .box__img {
+  background-image: url("/assets/praticas/jairo-da-silva-rocha/5-elementos-2.jpg");
+}
+#experiencias-escola.jairo .box:nth-of-type(2) .box__img {
+  background-image: url("/assets/praticas/jairo-da-silva-rocha/QUESTION-TAGS-1.jpeg");
+}
+#experiencias-escola.jairo .box:nth-of-type(3) .box__img {
+  background-image: url("/assets/praticas/jairo-da-silva-rocha/vozes-3.png");
+}
+#experiencias-escola.manuel .box:nth-of-type(1) .box__img {
+  background-image: url("/assets/praticas/manuel-rodrigues-de-souza/as-supermendes-1.jpg");
+}
+#experiencias-escola.manuel .box:nth-of-type(2) .box__img {
+  background-image: url("/assets/praticas/manuel-rodrigues-de-souza/infraestrutura-3.jpg");
+}
+#experiencias-escola.ruy .box:nth-of-type(1) .box__img {
+  background-image: url("/assets/praticas/ruy-alencar/parada-2.png");
+}
+
 #quem section:not(.hero, .conclusao) {
   height: 70vh;
 }
@@ -1283,10 +1472,26 @@ section > * {
   background: url("/assets/imgs/ondinhas-laranja.png") repeat center/cover;
   transform: scale(-1);
 }
+#pratica .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #pratica .nome-escola {
+  display: inline-block;
   font-family: "Navigator Extended", sans-serif;
   font-size: 2rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.2s ease;
+}
+#pratica .nome-escola:visited, #pratica .nome-escola:link {
   color: #ff9900;
+}
+#pratica .nome-escola:hover {
+  color: #000e88;
+  background-color: orange;
 }
 #pratica .tag {
   font-family: "Navigator Extended", sans-serif;
@@ -1298,37 +1503,59 @@ section > * {
   color: #3a0061;
   background-color: #00ff00;
   padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
 }
 #pratica .nome .cidilha::after {
   background-color: #3a0061;
   height: 1.5rem;
 }
+#pratica .subnome {
+  color: #3a0061;
+}
+#pratica .subnome .cidilha::after {
+  background-color: #3a0061;
+  height: 0.8rem;
+}
 #pratica .informacoes-gerais {
+  margin: 0 auto;
   display: flex;
   gap: 5rem;
   justify-content: center;
   margin-bottom: 8dvb;
 }
+#pratica .informacoes-gerais .integrantes {
+  max-width: 50rem;
+}
 #pratica .conteudo-principal {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 6rem;
 }
-#pratica .conteudo-principal > div {
-  position: relative;
+#pratica .conteudo-principal > div:not(.galeria) {
   width: 100%;
-  padding: 5rem 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#pratica .conteudo-principal > div:not(.galeria) .tag + div {
+  padding: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #pratica .conteudo-principal .tag {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: max-content;
+  display: block;
+  width: 100%;
   padding: 1rem 3rem;
   line-height: 1;
   color: #ffffff;
+}
+#pratica .motivacao {
+  background-color: #39b2b5;
+}
+#pratica .motivacao .tag {
+  background-color: #883d00;
 }
 #pratica .o-que-foi-desenvolvido {
   background-color: #dc69ff;
@@ -1336,10 +1563,13 @@ section > * {
 #pratica .o-que-foi-desenvolvido .tag {
   background-color: #000e88;
 }
+#pratica .relevancia {
+  background-color: #fe5757;
+}
+#pratica .relevancia .tag {
+  background-color: #3a0061;
+}
 #pratica .aprendizados {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #69c8ff;
 }
 #pratica .aprendizados .tag {
@@ -1375,13 +1605,244 @@ section > * {
 }
 #pratica .galeria .tag {
   background-color: #3a0061;
+  margin-bottom: 1rem;
 }
 #pratica .galeria .tag .cidilha::after {
   height: 0.5rem;
 }
-#pratica .galeria img {
-  max-width: 50rem;
+#pratica.cinco-elementos .conteudo-principal {
+  grid-template-columns: repeat(6, 1fr);
+}
+#pratica.cinco-elementos .conteudo-principal.boxes--col-2 {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0;
+}
+#pratica.cinco-elementos .boxes--col-2 {
+  grid-template-rows: repeat(2, 1fr) !important;
+  grid-column: 4/-1;
+}
+#pratica.cinco-elementos .motivacao {
+  grid-column: 1/-1;
+}
+#pratica.cinco-elementos .o-que-foi-desenvolvido {
+  grid-column: 1/4;
+}
+#pratica.cinco-elementos .relevancia {
+  grid-column: 4/-1;
+}
+#pratica.cinco-elementos .aprendizados {
+  grid-column: 1/4;
+}
+#pratica.question-tags .conteudo-principal {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+}
+#pratica.question-tags .conteudo-principal > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pratica.question-tags .o-que-foi-desenvolvido {
+  grid-row: 1/-1;
+}
+#pratica.question-tags .o-que-foi-desenvolvido .tag + div {
+  display: block !important;
+  text-align: left;
+}
+#pratica.question-tags .pdf .tag {
+  margin-bottom: 3rem;
+}
+#pratica.question-tags .pdf div {
   width: 100%;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 0 !important;
+}
+#pratica.question-tags .pdf .iframe {
+  min-width: 50rem;
+  height: 40rem;
+  flex: 1;
+}
+#pratica.vozes-comunidade .conteudo-principal {
+  grid-template-columns: repeat(6, 1fr);
+}
+#pratica.vozes-comunidade .conteudo-principal.boxes--col-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+#pratica.vozes-comunidade .boxes--col-2 {
+  display: grid !important;
+  grid-template-rows: repeat(2, auto) !important;
+  row-gap: 4rem;
+  grid-column: 1/4;
+}
+#pratica.vozes-comunidade .relevancia {
+  grid-column: 4/-1;
+}
+#pratica.vozes-comunidade .aprendizados {
+  grid-column: 1/3;
+}
+#pratica.vozes-comunidade .desafios {
+  grid-column: 3/5;
+}
+#pratica.vozes-comunidade .funcionamento-e-melhorias {
+  grid-column: 5/-1;
+}
+#pratica.supermendes .conteudo-principal, #pratica.infraestrutura .conteudo-principal {
+  grid-template-columns: repeat(6, 1fr);
+}
+#pratica.supermendes .motivacao, #pratica.infraestrutura .motivacao {
+  grid-column: 1/4;
+}
+#pratica.supermendes .o-que-foi-desenvolvido, #pratica.infraestrutura .o-que-foi-desenvolvido {
+  grid-column: 4/-1;
+}
+#pratica.supermendes .relevancia, #pratica.infraestrutura .relevancia {
+  grid-column: 1/5;
+}
+#pratica.supermendes .aprendizados, #pratica.infraestrutura .aprendizados {
+  grid-column: 5/-1;
+}
+#pratica.supermendes .desafios, #pratica.infraestrutura .desafios {
+  grid-column: 1/3;
+}
+#pratica.supermendes .funcionamento-e-melhorias, #pratica.infraestrutura .funcionamento-e-melhorias {
+  grid-column: 3/-1;
+}
+#pratica.supermendes .gallery, #pratica.infraestrutura .gallery {
+  grid-template-columns: repeat(3, minmax(200px, max-content));
+}
+#pratica.desafio .conteudo-principal, #pratica.starsgirls .conteudo-principal, #pratica.twice .conteudo-principal {
+  grid-template-columns: repeat(3, 1fr);
+}
+#pratica.seguranca .conteudo-principal {
+  grid-template-columns: repeat(3, 1fr);
+}
+#pratica.seguranca .o-que-foi-desenvolvido {
+  grid-column: 1/-1;
+}
+#pratica.winters .conteudo-principal {
+  grid-template-columns: repeat(6, 1fr);
+}
+#pratica.winters .motivacao {
+  grid-column: 1/3;
+}
+#pratica.winters .o-que-foi-desenvolvido {
+  grid-column: 3/5;
+}
+#pratica.winters .aprendizados {
+  grid-column: 5/-1;
+}
+#pratica.winters .desafios {
+  grid-column: 1/4;
+}
+#pratica.winters .funcionamento-e-melhorias {
+  grid-column: 4/-1;
+}
+#pratica.falta .conteudo-principal {
+  grid-template-columns: repeat(6, 1fr);
+}
+#pratica.falta .motivacao {
+  grid-column: 1/5;
+}
+#pratica.falta .o-que-foi-desenvolvido {
+  grid-column: 5/-1;
+}
+#pratica.falta .relevancia {
+  grid-column: 1/5;
+}
+#pratica.falta .aprendizados {
+  grid-column: 5/-1;
+}
+#pratica.falta .desafios {
+  grid-column: 1/3;
+}
+#pratica.falta .funcionamento-e-melhorias {
+  grid-column: 3/-1;
+}
+#pratica.falta .gallery {
+  grid-template-columns: repeat(3, minmax(200px, max-content));
+}
+#pratica.quimera .conteudo-principal {
+  grid-template-columns: repeat(6, 1fr);
+}
+#pratica.quimera .motivacao {
+  grid-column: 1/4;
+}
+#pratica.quimera .o-que-foi-desenvolvido {
+  grid-column: 4/-1;
+}
+#pratica.quimera .relevancia {
+  grid-column: 1/-1;
+}
+#pratica.quimera .aprendizados {
+  grid-column: 1/3;
+}
+#pratica.quimera .desafios {
+  grid-column: 3/5;
+}
+#pratica.quimera .funcionamento-e-melhorias {
+  grid-column: 5/-1;
+}
+#pratica.uni-quatro .conteudo-principal {
+  grid-template-columns: repeat(6, 1fr);
+}
+#pratica.uni-quatro .o-que-foi-desenvolvido {
+  grid-column: 1/-1;
+}
+#pratica.uni-quatro .motivacao {
+  grid-column: 1/4;
+}
+#pratica.uni-quatro .relevancia {
+  grid-column: 4/-1;
+}
+#pratica.uni-quatro .aprendizados {
+  grid-column: 1/3;
+}
+#pratica.uni-quatro .desafios {
+  grid-column: 3/5;
+}
+#pratica.uni-quatro .funcionamento-e-melhorias {
+  grid-column: 5/-1;
+}
+#pratica.parada .conteudo-principal {
+  grid-template-columns: repeat(4, 1fr);
+}
+#pratica.parada .conteudo-principal.boxes--col-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+#pratica.parada .boxes--col-2 {
+  display: grid !important;
+  grid-template-rows: repeat(2, auto) !important;
+  row-gap: 4rem;
+  grid-column: 1/3;
+}
+#pratica.parada .o-que-foi-desenvolvido {
+  grid-column: 1/-1;
+}
+#pratica.parada .motivacao {
+  grid-column: 1/3;
+}
+#pratica.parada .relevancia {
+  grid-column: 3/-1;
+}
+#pratica.parada .funcionamento-e-melhorias {
+  grid-column: 3/-1;
+}
+#pratica.parada .pdf .tag {
+  margin-bottom: 3rem;
+}
+#pratica.parada .pdf div {
+  width: 100%;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 0 !important;
+}
+#pratica.parada .pdf .iframe {
+  min-width: 50rem;
+  height: 40rem;
+  flex: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
