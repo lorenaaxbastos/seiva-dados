@@ -31,6 +31,14 @@ $color-orange-dark: #883d00;
   color: $color;
   background-color: $bg-color;
   padding: 0.5rem 1rem;
+
+  @media (max-width: 64em) {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 }
 
 // RESET
@@ -79,10 +87,18 @@ h6 {
 
 h1 {
   font-size: 5.4rem;
+
+  @media (max-width: 64em) {
+    font-size: 3.2rem;
+  }
 }
 
 h2 {
   font-size: 3.6rem;
+
+  @media (max-width: 64em) {
+    font-size: 2.8rem;
+  }
 }
 
 h3 {
@@ -195,6 +211,15 @@ section {
       max-width: 80%;
     }
   }
+
+  @media (max-width: 64em) {
+    height: auto;
+    padding: 4rem 3rem;
+
+    & > * {
+      max-width: 100%;
+    }
+  }
 }
 
 .list {
@@ -236,13 +261,26 @@ section {
   display: flex;
   gap: 6rem;
 
+  @media (max-width: 64em) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
   &--reverse {
     flex-direction: row-reverse;
+
+    @media (max-width: 64em) {
+      flex-direction: column-reverse;
+    }
   }
 
   & > div {
     z-index: 2;
     max-width: 60%;
+
+    @media (max-width: 64em) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -345,6 +383,10 @@ section {
   &--1 {
     &::after {
       background: url("/assets/imgs/comp-1.png") no-repeat center/cover;
+
+      @media (max-width: 64em) {
+        background-position: 30%;
+      }
     }
 
     &::before {
@@ -355,6 +397,10 @@ section {
   &--2 {
     &::after {
       background: url("/assets/imgs/comp-2.png") no-repeat center/cover;
+
+      @media (max-width: 64em) {
+        background-position: 70%;
+      }
     }
   }
 
@@ -394,18 +440,30 @@ section {
   &--red {
     &::after {
       background: url("/assets/imgs/moldura-2.png") no-repeat center/cover;
+
+      @media (max-width: 64em) {
+        background-position: 10%;
+      }
     }
   }
 
   &--purple {
     &::after {
       background: url("/assets/imgs/moldura-1.png") no-repeat center/cover;
+
+      @media (max-width: 64em) {
+        background-position: 10%;
+      }
     }
   }
 
   &--reverse {
     &::after {
       transform: scaleX(-1);
+
+      @media (max-width: 64em) {
+        background-position: 90%;
+      }
     }
 
     &::before {
@@ -430,7 +488,7 @@ section {
     &::after {
       top: 0;
       left: 0;
-      background: url("/assets/imgs/moldura-4.png") no-repeat left/contain;
+      background: url("/assets/imgs/moldura-4.png") no-repeat top left/contain;
     }
   }
 
@@ -438,7 +496,7 @@ section {
     &::after {
       bottom: 0;
       right: 0;
-      background: url("/assets/imgs/moldura-5.png") no-repeat right/contain;
+      background: url("/assets/imgs/moldura-5.png") no-repeat bottom right/contain;
     }
   }
 
@@ -455,6 +513,10 @@ section {
   z-index: 1;
   position: absolute;
   bottom: -12rem;
+
+  @media (max-width: 64em) {
+    bottom: -8rem;
+  }
 
   &--right {
     left: unset;
@@ -488,6 +550,10 @@ section {
 
   @media (max-width: 100em) {
     width: 35rem;
+  }
+
+  @media (max-width: 64em) {
+    width: 20rem;
   }
 }
 
@@ -533,25 +599,44 @@ section {
   left: 0;
   width: 100%;
   padding: 4rem 6rem;
+
+  @media (max-width: 64em) {
+    padding: 0 2rem;
+  }
 }
 
 .navbar {
   width: 100%;
-  padding: 0 4rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $color-white;
   box-shadow: 0 1rem 2rem rgba($color-blue-dark, 0.5);
 
+  @media (max-width: 64em) {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   &__logo {
+    width: 25rem;
     position: relative;
     display: block;
+    transform: translateY(3rem) rotate(20deg);
     transition: transform 0.3s ease;
-    transform: rotate(20deg);
 
-    &:hover {
+    @media (max-width: 64em) {
+      transform: none;
+    }
+
+    &:has(img:hover) {
       transform: rotate(0deg);
+
+      @media (max-width: 64em) {
+        transform: none;
+      }
     }
 
     &::after {
@@ -561,10 +646,14 @@ section {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(-36%, -29%);
+      transform: translate(-45%, -30%);
       width: 330%;
       height: 330%;
       background: url("/assets/imgs/barco-azul.png") no-repeat center/contain;
+
+      @media (max-width: 64em) {
+        transform: translate(-44%, -29%);
+      }
     }
 
     .logo {
@@ -577,6 +666,10 @@ section {
       @media (max-width: 100em) {
         width: 8rem;
       }
+
+      @media (max-width: 64em) {
+        width: 10rem;
+      }
     }
   }
 
@@ -587,6 +680,29 @@ section {
 
     @media (max-width: 100em) {
       gap: 0.5rem;
+    }
+
+    @media (max-width: 64em) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    &:has(+ .active) {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
     }
   }
 
@@ -606,12 +722,15 @@ section {
 
   &__navlink:visited,
   &__navlink:link {
+    display: inline-block;
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 500;
     color: $color-blue-dark;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    line-height: 1.2;
     padding: 0.5rem 1rem;
     border: 3px solid transparent;
     transition: all 0.2s ease;
@@ -626,6 +745,84 @@ section {
     @media (max-width: 100em) {
       font-size: 1.3rem;
       padding: 0.5rem;
+    }
+
+    @media (max-width: 64em) {
+      font-size: 1.8rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__menu {
+    flex-shrink: 0;
+    display: none;
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    background-color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-blue-dark, 0.5);
+    outline: none;
+    border: none;
+    transition: box-shadow 0.3s ease;
+
+    @media (max-width: 64em) {
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $color-white;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      box-shadow: none;
+
+      &::after {
+        transform: scale(50);
+      }
+
+      span {
+        &:nth-of-type(1) {
+          top: 3.5rem;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:nth-of-type(2) {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:nth-of-type(3) {
+          top: 3.5rem;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 4rem;
+      height: 0.6rem;
+      background-color: $color-blue;
+      transition: transform 0.2s ease;
+
+      &:nth-of-type(1) {
+        top: 2rem;
+      }
+      &:nth-of-type(2) {
+        top: 3.5rem;
+      }
+      &:nth-of-type(3) {
+        top: 5rem;
+      }
     }
   }
 }
@@ -671,6 +868,14 @@ section {
       background-color: $color-blue;
     }
   }
+
+  @media (max-width: 90em) {
+    transform: translateY(calc(100% + 4.7rem));
+  }
+
+  @media (max-width: 64em) {
+    display: none;
+  }
 }
 
 // FOOTER
@@ -682,28 +887,54 @@ section {
   background: url("/assets/imgs/textura-rosa.png");
   box-shadow: 0 -1rem 4rem rgba($color-pink-dark, 0.5);
 
+  @media (max-width: 48em) {
+    padding: 1rem;
+  }
+
   .regua-logos {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4rem;
 
+    @media (max-width: 48em) {
+      gap: 1rem;
+    }
+
     &__logo {
+      display: block;
+
       img {
         max-height: 10rem;
         height: 6rem;
+
+        @media (max-width: 48em) {
+          height: 2.5rem;
+        }
       }
 
       &:nth-child(1) img {
-        height: 9rem;
+        height: 5rem;
+
+        @media (max-width: 48em) {
+          height: 4rem;
+        }
       }
 
       &:nth-of-type(4) img {
         height: 4rem;
+
+        @media (max-width: 48em) {
+          height: 2rem;
+        }
       }
 
       &:nth-of-type(5) img {
         height: 6rem;
+
+        @media (max-width: 48em) {
+          height: 3rem;
+        }
       }
     }
   }
@@ -716,11 +947,20 @@ section {
     background: url("/assets/imgs/bg-fundo-vermelho.png") no-repeat center;
     background-size: cover;
 
+    @media (max-width: 64em) {
+      height: 60rem;
+      background-position: 70%;
+    }
+
     &__content {
       max-width: 60rem;
 
       @media (max-width: 100em) {
         max-width: 50rem;
+      }
+
+      @media (max-width: 27em) {
+        max-width: 25rem;
       }
     }
 
@@ -811,6 +1051,11 @@ section {
         font-weight: 500;
         line-height: 1.1;
       }
+
+      @media (max-width: 64em) {
+        // max-width: 100%;
+        margin: 0 auto;
+      }
     }
 
     &__box-text {
@@ -831,6 +1076,10 @@ section {
     &__img {
       width: 100%;
       width: 60rem;
+
+      @media (max-width: 64em) {
+        width: 100%;
+      }
     }
 
     &__img-caption {
@@ -857,7 +1106,7 @@ section {
     text-align: center;
 
     @media (max-width: 100em) {
-      padding-top: 8rem !important;
+      padding-top: 12rem !important;
     }
   }
 
@@ -874,6 +1123,10 @@ section {
     gap: 4rem;
     row-gap: 8rem;
     justify-content: center;
+
+    @media (max-width: 64em) {
+      row-gap: 5rem;
+    }
   }
 
   .box {
@@ -960,7 +1213,7 @@ section {
     }
 
     @media (max-width: 100em) {
-      max-width: 20rem;
+      max-width: 30rem;
     }
   }
 
@@ -999,7 +1252,7 @@ section {
       align-items: center;
 
       @media (max-width: 100em) {
-        padding-top: 8rem !important;
+        padding-top: 12rem !important;
       }
     }
 
@@ -1010,6 +1263,10 @@ section {
     }
 
     .column-2 > div {
+      @media (max-width: 64em) {
+        display: none;
+      }
+
       position: relative;
 
       .hero__img-wrapper {
@@ -1092,6 +1349,15 @@ section {
         padding: 3rem;
         color: $color-purple-accent;
         background-color: $color-green-accent;
+
+        @media (max-width: 48em) {
+          float: none;
+          display: block;
+          width: 100%;
+          margin-right: 0;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
       }
 
       .bold {
@@ -1127,6 +1393,7 @@ section {
         line-height: 1.2;
         float: right;
         width: 52rem;
+        margin-top: 2rem;
         margin-left: 3rem;
         text-align: right;
         padding: 3rem;
@@ -1135,6 +1402,15 @@ section {
 
         .cidilha::after {
           background-color: $color-orange-accent;
+        }
+
+        @media (max-width: 48em) {
+          float: none;
+          display: block;
+          width: 100%;
+          margin-left: 0;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
         }
       }
 
@@ -1155,7 +1431,7 @@ section {
       text-align: center;
 
       @media (max-width: 100em) {
-        padding-top: 8rem !important;
+        padding-top: 12rem !important;
       }
     }
 
@@ -1175,27 +1451,150 @@ section {
       }
     }
 
-    .map {
-      height: 75rem;
-      border: 1px solid $color-grey-md;
+    .boxes {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .school {
-      &__box {
-        font-family: "Roboto", sans-serif;
+    .box {
+      max-width: 40rem;
+      display: flex;
+
+      &__content {
+        width: 100%;
         padding: 2rem;
-        width: 35rem;
-        font-size: 1.4rem;
-        line-height: 1.3;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: background-color 0.2s ease;
+      }
+
+      &__img {
+        width: 100%;
+        height: 20rem;
+        background-size: cover;
+        background-position: center;
       }
 
       &__name {
-        display: inline-block;
         font-family: "Navigator Extended", sans-serif;
-        font-weight: 500;
-        font-size: 1.8rem;
-        letter-spacing: 1px;
-        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin: 2rem 0;
+      }
+
+      &__text {
+        p {
+          line-height: 1.2;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      &__btn {
+        &:visited,
+        &:link {
+          width: 100%;
+          padding: 1rem;
+          display: block;
+          margin-top: auto;
+          text-decoration: none;
+          line-height: 1.2;
+          text-align: center;
+          color: $color-white;
+          background-color: $color-pink-dark;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          background-color: $color-blue !important;
+        }
+      }
+
+      &:nth-of-type(1) {
+        .box {
+          &__content {
+            background-color: $color-salmon;
+          }
+
+          &__btn {
+            background-color: $color-red-dark;
+          }
+
+          &__img {
+            background-image: url("/assets/imgs/escola-jairo.png");
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .box {
+          &__content {
+            background-color: $color-green;
+          }
+
+          &__btn {
+            background-color: $color-green-dark;
+          }
+
+          &__img {
+            background-image: url("/assets/imgs/escola-manuel.png");
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .box {
+          &__content {
+            background-color: $color-purple-accent-light;
+          }
+
+          &__btn {
+            background-color: $color-purple-accent-dark;
+          }
+
+          &__img {
+            background-image: url("/assets/imgs/escola-nathalia.png");
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        .box {
+          &__content {
+            background-color: $color-pink-accent-light;
+          }
+
+          &__btn {
+            background-color: $color-pink-dark;
+          }
+
+          &__img {
+            background-image: url("/assets/imgs/escola-roberto.png");
+          }
+        }
+      }
+
+      &:nth-of-type(5) {
+        .box {
+          &__content {
+            background-color: $color-blue-accent-light;
+          }
+
+          &__btn {
+            background-color: $color-blue-dark;
+          }
+
+          &__img {
+            background-image: url("/assets/imgs/escola-ruy.png");
+          }
+        }
       }
     }
   }
@@ -1210,7 +1609,7 @@ section {
       text-align: center;
 
       @media (max-width: 100em) {
-        padding-top: 8rem !important;
+        padding-top: 12rem !important;
       }
     }
 
@@ -1230,6 +1629,10 @@ section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
+
+      @media (max-width: 48em) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     .boxes--col-2 {
@@ -1245,7 +1648,7 @@ section {
             &:visited,
             &:link {
               color: $color-white;
-              background-color: $color-aqua-dark;
+              background-color: $color-green-dark;
             }
           }
 
@@ -1273,6 +1676,12 @@ section {
             right: 0;
             left: unset;
             transform: translate(20%, -20%);
+
+            @media (max-width: 48em) {
+              right: unset;
+              left: 0;
+              transform: translate(-20%, -20%);
+            }
           }
         }
       }
@@ -1398,7 +1807,7 @@ section {
       text-align: center;
 
       @media (max-width: 100em) {
-        padding-top: 8rem !important;
+        padding-top: 12rem !important;
       }
     }
 
@@ -1414,16 +1823,23 @@ section {
   }
 
   .boxes {
+    width: 100%;
     display: flex;
-    gap: 3rem;
-    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .box {
-    max-width: 60rem;
     flex: 1;
+    max-width: 60rem;
+    width: 100%;
     display: flex;
+
+    @media (max-width: 64em) {
+      flex: none;
+      max-width: 35rem;
+    }
 
     &__link {
       display: flex;
@@ -1451,7 +1867,27 @@ section {
       }
     }
 
+    &__btn {
+      &:visited,
+      &:link {
+        width: 100%;
+        padding: 1rem;
+        display: block;
+        margin-top: auto;
+        text-decoration: none;
+        line-height: 1.2;
+        text-align: center;
+        color: $color-white;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        background-color: $color-salmon !important;
+      }
+    }
+
     &__content {
+      width: 100%;
       padding: 2rem;
       display: flex;
       flex-direction: column;
@@ -1471,6 +1907,13 @@ section {
       font-size: 2.2rem;
       line-height: 1.2;
       margin: 2rem 0;
+
+      .cidilha {
+        &::after {
+          background-color: $color-black;
+          width: 0.3rem;
+        }
+      }
     }
 
     &__text {
@@ -1481,12 +1924,18 @@ section {
           margin-bottom: 1rem;
         }
       }
+
+      margin-bottom: 3rem;
     }
 
     &:nth-of-type(1) {
       .box {
         &__content {
           background-color: $color-green;
+        }
+
+        &__btn {
+          background-color: $color-green-dark;
         }
       }
     }
@@ -1496,6 +1945,10 @@ section {
         &__content {
           background-color: $color-blue-accent-light;
         }
+
+        &__btn {
+          background-color: $color-blue-dark;
+        }
       }
     }
 
@@ -1504,6 +1957,10 @@ section {
         &__content {
           background-color: $color-purple-accent-light;
         }
+
+        &__btn {
+          background-color: $color-purple-accent-dark;
+        }
       }
     }
 
@@ -1511,6 +1968,10 @@ section {
       .box {
         &__content {
           background-color: $color-aqua;
+        }
+
+        &__btn {
+          background-color: $color-aqua-dark;
         }
       }
     }
@@ -1654,12 +2115,28 @@ section {
 }
 
 #quem {
+  .blobs::after,
+  .details::after,
+  .details::before {
+    @media (max-width: 64em) {
+      display: none;
+    }
+  }
+
   section:not(.hero, .conclusao) {
     height: 70vh;
+    @media (max-width: 64em) {
+      height: auto;
+    }
   }
 
   .column-2 {
     gap: 15rem;
+
+    @media (max-width: 64em) {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
   }
 
   h2 {
@@ -1700,11 +2177,27 @@ section {
         width: 100%;
         max-width: 50rem;
         max-height: 40rem;
+
+        @media (max-width: 64em) {
+          max-width: 30rem;
+        }
       }
     }
   }
 
   .hero {
+    .algas,
+    .olhos,
+    .barco {
+      @media (max-width: 64em) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 64em) {
+      padding-top: 10rem;
+    }
+
     &__content {
       max-width: 60rem;
 
@@ -1733,6 +2226,11 @@ section {
         font-size: 1.6rem;
         margin-left: -5rem;
         margin-right: -5rem;
+      }
+
+      @media (max-width: 48em) {
+        font-size: 1.8rem;
+        margin: 0;
       }
     }
   }
@@ -1856,6 +2354,10 @@ section {
   .conclusao {
     text-align: center;
 
+    @media (max-width: 64em) {
+      padding: 6rem 3rem;
+    }
+
     &__content {
       max-width: 60rem;
     }
@@ -1864,11 +2366,20 @@ section {
       font-size: 6rem;
 
       @include tag($color-blue-dark, $color-green-accent);
+
+      @media (max-width: 64em) {
+        font-size: 4rem;
+      }
     }
 
     &__text {
       color: $color-white;
       font-size: 2.2rem;
+
+      @media (max-width: 64em) {
+        font-size: 1.8rem;
+        line-height: 1.3;
+      }
     }
   }
 }
@@ -1882,7 +2393,7 @@ section {
       text-align: center;
 
       @media (max-width: 100em) {
-        padding-top: 8rem !important;
+        padding-top: 12rem !important;
       }
     }
   }
@@ -1963,12 +2474,35 @@ section {
 
     .integrantes {
       max-width: 50rem;
+
+      @media (max-width: 48em) {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 48em) {
+      flex-direction: column;
+      gap: 2rem;
     }
   }
 
   .conteudo-principal {
     display: grid;
     gap: 6rem;
+
+    @media (max-width: 64em) {
+      gap: 2rem;
+    }
+
+    @media (max-width: 48em) {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    & > div {
+      @media (max-width: 48em) {
+        grid-column: 1/-1 !important;
+      }
+    }
 
     & > div:not(.galeria) {
       width: 100%;
@@ -1983,6 +2517,10 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 27em) {
+          padding: 2rem;
+        }
       }
     }
 
@@ -1992,6 +2530,10 @@ section {
       padding: 1rem 3rem;
       line-height: 1;
       color: $color-white;
+
+      @media (max-width: 27em) {
+        padding: 1rem;
+      }
     }
   }
 
@@ -2050,11 +2592,15 @@ section {
     .tag {
       background-color: $color-orange-dark;
     }
+  }
 
-    .iframe {
-      width: 100%;
-      height: 60rem;
-      border: 2px solid $color-grey-md;
+  .iframe {
+    width: 100%;
+    height: 60rem;
+    border: 2px solid $color-grey-md;
+
+    @media (max-width: 48em) {
+      height: 40rem;
     }
   }
 
@@ -2141,7 +2687,6 @@ section {
       }
 
       .iframe {
-        min-width: 50rem;
         height: 40rem;
         flex: 1;
       }
@@ -2209,10 +2754,6 @@ section {
 
     .funcionamento-e-melhorias {
       grid-column: 3/-1;
-    }
-
-    .gallery {
-      grid-template-columns: repeat(3, minmax(200px, max-content));
     }
   }
 
@@ -2287,10 +2828,6 @@ section {
 
     .funcionamento-e-melhorias {
       grid-column: 3/-1;
-    }
-
-    .gallery {
-      grid-template-columns: repeat(3, minmax(200px, max-content));
     }
   }
 
@@ -2398,12 +2935,12 @@ section {
         gap: 3rem;
         padding: 0 !important;
       }
+    }
 
-      .iframe {
-        min-width: 50rem;
-        height: 40rem;
-        flex: 1;
-      }
+    .iframe {
+      width: 100%;
+      height: 30rem;
+      flex: 1;
     }
   }
 }

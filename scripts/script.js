@@ -20,6 +20,12 @@ fetch("/components/header.html")
     }
 
     adjustContentPos();
+
+    const menuBtn = document.querySelector(".navbar__menu");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+    });
   })
   .catch((error) => {
     console.error("Erro ao carregar o header:", error);
