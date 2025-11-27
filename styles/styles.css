@@ -796,7 +796,7 @@ section > * {
   }
 }
 #footer .regua-logos__logo:nth-child(1) img {
-  height: 5rem;
+  height: 9rem;
 }
 @media (max-width: 48em) {
   #footer .regua-logos__logo:nth-child(1) img {
